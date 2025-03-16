@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Картки компетентностей</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.2s;
+          
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            pointer-events: none;
+            -webkit-user-drag: none;
+            user-select: none;
+            transition: transform 0.3s;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <h2>Картки компетентностей</h2>
+    <div class="gallery">
+        <img src="card01.jpg" alt="Card 1" onclick="openModal(this)">
+        <img src="card02.jpg" alt="Card 2" onclick="openModal(this)">
+        <img src="card03.jpg" alt="Card 3" onclick="openModal(this)">
+        <img src="card04.jpg" alt="Card 4" onclick="openModal(this)">
+        <img src="card05.jpg" alt="Card 5" onclick="openModal(this)">
+        <img src="card06.jpg" alt="Card 6" onclick="openModal(this)">
+        <img src="card07.jpg" alt="Card 7" onclick="openModal(this)">
+        <img src="card08.jpg" alt="Card 8" onclick="openModal(this)">
+        <img src="card09.jpg" alt="Card 9" onclick="openModal(this)">
+        <img src="card10.jpg" alt="Card 10" onclick="openModal(this)">
+<img src="card11.jpg" alt="Card 11" onclick="openModal(this)">
+<img src="card12.jpg" alt="Card 12" onclick="openModal(this)">
+<img src="card13.jpg" alt="Card 13" onclick="openModal(this)">
+<img src="card14.jpg" alt="Card 14" onclick="openModal(this)">
+<img src="card15.jpg" alt="Card 15" onclick="openModal(this)">
+<img src="card16.jpg" alt="Card 16" onclick="openModal(this)">
+<img src="card17.jpg" alt="Card 17" onclick="openModal(this)">
+<img src="card18.jpg" alt="Card 18" onclick="openModal(this)">
+<img src="card19.jpg" alt="Card 19" onclick="openModal(this)">
+<img src="card20.jpg" alt="Card 20" onclick="openModal(this)">
+<img src="card21.jpg" alt="Card 21" onclick="openModal(this)">
+<img src="card22.jpg" alt="Card 22" onclick="openModal(this)">
+<img src="card23.jpg" alt="Card 23" onclick="openModal(this)">
+<img src="card24.jpg" alt="Card 24" onclick="openModal(this)">
+<img src="card25.jpg" alt="Card 25" onclick="openModal(this)">
+<img src="card26.jpg" alt="Card 26" onclick="openModal(this)">
+<img src="card27.jpg" alt="Card 27" onclick="openModal(this)">
+<img src="card28.jpg" alt="Card 28" onclick="openModal(this)">
+<img src="card29.jpg" alt="Card 29" onclick="openModal(this)">
+<img src="card30.jpg" alt="Card 30" onclick="openModal(this)">
+<img src="card31.jpg" alt="Card 31" onclick="openModal(this)">
+<img src="card32.jpg" alt="Card 32" onclick="openModal(this)">
+<img src="card33.jpg" alt="Card 33" onclick="openModal(this)">
+<img src="card34.jpg" alt="Card 34" onclick="openModal(this)">
+<img src="card35.jpg" alt="Card 35" onclick="openModal(this)">
+<img src="card36.jpg" alt="Card 36" onclick="openModal(this)">
+<img src="card37.jpg" alt="Card 37" onclick="openModal(this)">
+<img src="card38.jpg" alt="Card 38" onclick="openModal(this)">
+<img src="card39.jpg" alt="Card 39" onclick="openModal(this)">
+<img src="card40.jpg" alt="Card 40" onclick="openModal(this)">
+<img src="card41.jpg" alt="Card 41" onclick="openModal(this)">
+<img src="card42.jpg" alt="Card 42" onclick="openModal(this)">
+<img src="card43.jpg" alt="Card 43" onclick="openModal(this)">
+<img src="card44.jpg" alt="Card 44" onclick="openModal(this)">
+<img src="card45.jpg" alt="Card 45" onclick="openModal(this)">
+<img src="card46.jpg" alt="Card 46" onclick="openModal(this)">
+<img src="card47.jpg" alt="Card 47" onclick="openModal(this)">
+<img src="card48.jpg" alt="Card 48" onclick="openModal(this)">
+<img src="card49.jpg" alt="Card 49" onclick="openModal(this)">
+<img src="card50.jpg" alt="Card 50" onclick="openModal(this)">
+<img src="card51.jpg" alt="Card 51" onclick="openModal(this)">
+<img src="card52.jpg" alt="Card 52" onclick="openModal(this)">
+<img src="card53.jpg" alt="Card 53" onclick="openModal(this)">
+<img src="card54.jpg" alt="Card 54" onclick="openModal(this)">
+<img src="card55.jpg" alt="Card 55" onclick="openModal(this)">
+<img src="card56.jpg" alt="Card 56" onclick="openModal(this)">
+<img src="card57.jpg" alt="Card 57" onclick="openModal(this)">
+
+    </div>
+    
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg" onwheel="zoom(event)">
+    </div>
+    
+    <script>
+        function openModal(imgElement) {
+            document.getElementById("modal").style.display = "flex";
+            let modalImg = document.getElementById("modalImg");
+            modalImg.src = imgElement.src;
+            modalImg.style.transform = "scale(1)";
+        }
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+        
+        function zoom(event) {
+            event.preventDefault();
+            let modalImg = document.getElementById("modalImg");
+            let scale = parseFloat(modalImg.style.transform.replace("scale(", "").replace(")", "")) || 1;
+            let zoomFactor = 0.1;
+            
+            if (event.deltaY < 0) {
+                scale += zoomFactor;
+            } else {
+                scale = Math.max(1, scale - zoomFactor);
+            }
+            
+            modalImg.style.transform = `scale(${scale})`;
+        }
+    </script>
+</body>
+</html>
